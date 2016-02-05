@@ -101,7 +101,7 @@ var downloadImg=function(asyncNum){
 	}
 	console.log("即将异步并发下载图片，当前并发数为:"+asyncNum);
 	async.mapLimit(photos,asyncNum,function(photo,callback){
-		console.log("已有"+asyncNum+"张图片进入下载队列");ss
+		console.log("已有"+asyncNum+"张图片进入下载队列");
 		requestAndwrite(photo,callback);
 	},function(err,result){
 		if(err){
